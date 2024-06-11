@@ -21,7 +21,8 @@ RUN apt-get update && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ../pyproject.toml ../poetry.lock /source/
+COPY ../pyproject.toml /source/
+COPY ../poetry.lock /source/
 COPY ../plugins /source/plugins
 # COPY ../packages /source/packages
 
